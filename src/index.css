@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  overflow: hidden; /* For full screen map experience */
+  font-family: 'Courier Prime', 'Courier New', monospace; /* Pixel-ish font fallback */
+}
