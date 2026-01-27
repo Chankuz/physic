@@ -13,12 +13,18 @@ interface GameState {
     gameMode: 'quiz' | 'learning';
     isGameStarted: boolean;
 
+    // Player Stats
+    playerLevel: number;
+    playerXP: number;
+    xpToNextLevel: number;
+
     setGameStarted: (started: boolean) => void;
     setGameMode: (mode: 'quiz' | 'learning') => void;
     toggleNotebook: () => void;
     openLevelModal: (level: Level | LearningLevel) => void;
     closeLevelModal: () => void;
     unlockNextLevel: () => void;
+    gainXP: (amount: number) => void;
     isLevelUnlocked: (index: number) => boolean;
     isLevelCompleted: (index: number) => boolean;
 }
@@ -33,9 +39,35 @@ export const useGameStore = create<GameState>((set, get) => ({
     gameMode: 'quiz', // Default to quiz mode
     isGameStarted: false,
 
+    // Initial Stats
+    playerLevel: 1,
+    playerXP: 0,
+    xpToNextLevel: 100,
+
     setGameStarted: (started) => set({ isGameStarted: started }),
     setGameMode: (mode) => set({ gameMode: mode, isModalOpen: false, isNotebookOpen: false }),
     toggleNotebook: () => set((state) => ({ isNotebookOpen: !state.isNotebookOpen, isModalOpen: false })),
+
+    gainXP: (amount) => set((state) => {
+        let newXP = state.playerXP + amount;
+        let newLevel = state.playerLevel;
+        let newMaxXP = state.xpToNextLevel;
+
+        // Level Up Logic
+        if (newXP >= newMaxXP) {
+            newXP -= newMaxXP;
+            newLevel += 1;
+            // Simple formula: each level takes 1.5x more XP or just +50 flat
+            // Let's do a smooth curve: Previous Max * 1.2
+            newMaxXP = Math.floor(newMaxXP * 1.2);
+        }
+
+        return {
+            playerXP: newXP,
+            playerLevel: newLevel,
+            xpToNextLevel: newMaxXP
+        };
+    }),
 
     openLevelModal: (level) => {
         const state = get();

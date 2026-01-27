@@ -6,8 +6,8 @@ export interface Level {
     description: string;
     question: string;
     options: string[];
-    correctAnswer: number; // Index of the correct option
     img?: string
+    correctAnswer: number; // Index of the correct option
 }
 
 export type IslandStatus = 'locked' | 'unlocked' | 'completed';

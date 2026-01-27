@@ -1,48 +1,52 @@
 import type { Level } from '../types/game';
 
+
+//declare level options
 export const levels: Level[] = [
     {
         id: 'island-1',
         index: 0,
-        title: 'Atomic Structure',
-        objective: 'Understand protons, neutrons, and electrons',
-        description: 'Welcome, explorer! Navigate the subatomic seas. Your first task is to identify the charged particles within an atom.',
-        question: 'Which particle has a positive electrical charge?',
+        title: 'Atom Structure',
+        objective: 'เข้าใจโครงสร้างของอะตอม เช่น โปรตอน นิวตรอน และอิเล็กตรอน',
+        description: 'ยินดีต้อนรับ นักสำรวจ! ออกเดินทางสู่โลกใต้ระดับอะตอม ภารกิจแรกของคุณคือการระบุอนุภาคที่มีประจุไฟฟ้าในอะตอม',
+        question: 'อนุภาคใดมีประจุไฟฟ้าเป็นบวก?',
         options: [
-            'Electron',
-            'Neutron',
-            'Proton',
-            'Photon'
+            'อิเล็กตรอน',
+            'นิวตรอน',
+            'โปรตอน',
+            'โฟตอน'
         ],
+        img: 'https://media.geeksforgeeks.org/wp-content/uploads/20220727120730/AtomicStructure.jpg',
         correctAnswer: 2,
     },
     {
         id: 'island-2',
         index: 1,
-        title: 'Atomic Number',
-        objective: 'Understand atomic number and elements',
-        description: 'Elements are defined by their proton count. Can you identify an element based on its nucleus?',
-        question: 'An atom with 6 protons belongs to which element?',
+        title: 'เลขอะตอม',
+        objective: 'เข้าใจความหมายของเลขอะตอมและการจำแนกธาตุ',
+        description: 'ธาตุแต่ละชนิดถูกกำหนดด้วยจำนวนโปรตอนในนิวเคลียส คุณสามารถระบุชนิดของธาตุจากข้อมูลนี้ได้หรือไม่?',
+        question: 'อะตอมที่มีโปรตอน 6 ตัว เป็นธาตุใด?',
         options: [
-            'Oxygen',
-            'Carbon',
-            'Nitrogen',
-            'Hydrogen'
+            'ออกซิเจน',
+            'คาร์บอน',
+            'ไนโตรเจน',
+            'ไฮโดรเจน'
         ],
+        img: 'https://l450v.alamy.com/450vde/2a49ap8/kohlenstoff-c-chemische-element-co2-schild-mit-der-ordnungszahl-chemie-6-element-des-periodensystems-periodensystem-der-elemente-mit-der-ordnungszahl-wir-2a49ap8.jpg',
         correctAnswer: 1,
     },
     {
         id: 'island-3',
         index: 2,
         title: 'Isotopes',
-        objective: 'Understand isotopes and neutron differences',
-        description: 'Atoms of the same element can have different weights. These are called isotopes.',
-        question: 'What is the main difference between Carbon-12 and Carbon-14?',
+        objective: 'เข้าใจความหมายของไอโซโทปและความแตกต่างของจำนวนนิวตรอน',
+        description: 'อะตอมของธาตุเดียวกันอาจมีมวลต่างกันได้ ซึ่งเราเรียกว่าไอโซโทป',
+        question: 'ความแตกต่างหลักระหว่างคาร์บอน-12 และคาร์บอน-14 คืออะไร?',
         options: [
-            'Number of protons',
-            'Number of electrons',
-            'Number of neutrons',
-            'Atomic number'
+            'จำนวนโปรตอน',
+            'จำนวนอิเล็กตรอน',
+            'จำนวนนิวตรอน',
+            'เลขอะตอม'
         ],
         correctAnswer: 2,
     },
@@ -50,14 +54,14 @@ export const levels: Level[] = [
         id: 'island-4',
         index: 3,
         title: 'Electron Energy Levels',
-        objective: 'Understand electron energy transitions',
-        description: 'Electrons orbit at specific energy levels. They can jump between these levels by absorbing or releasing energy.',
-        question: 'What happens when an electron absorbs energy?',
+        objective: 'เข้าใจการเปลี่ยนระดับพลังงานของอิเล็กตรอน',
+        description: 'อิเล็กตรอนอยู่ในระดับพลังงานที่แน่นอน และสามารถย้ายระดับได้เมื่อดูดกลืนหรือปล่อยพลังงาน',
+        question: 'จะเกิดอะไรขึ้นเมื่ออิเล็กตรอนดูดกลืนพลังงาน?',
         options: [
-            'It moves to a lower energy level',
-            'It moves to a higher energy level',
-            'It leaves the atom completely',
-            'It turns into a proton'
+            'ย้ายไปยังระดับพลังงานที่ต่ำลง',
+            'ย้ายไปยังระดับพลังงานที่สูงขึ้น',
+            'หลุดออกจากอะตอม',
+            'เปลี่ยนเป็นโปรตอน'
         ],
         correctAnswer: 1,
     },
@@ -65,29 +69,31 @@ export const levels: Level[] = [
         id: 'island-5',
         index: 4,
         title: 'Energy Emission',
-        objective: 'Understand light emission from atoms',
-        description: 'When an electron falls back down, it must release its excess energy. This is the source of atomic light!',
-        question: 'How is light (a photon) produced in an atom?',
+        objective: 'เข้าใจการเกิดแสงจากอะตอม',
+        description: 'เมื่ออิเล็กตรอนตกกลับสู่ระดับพลังงานต่ำกว่า มันจะปล่อยพลังงานออกมาในรูปของแสง',
+        question: 'แสง (โฟตอน) เกิดขึ้นในอะตอมได้อย่างไร?',
         options: [
-            'An electron moves to a higher level',
-            'A proton absorbs energy',
-            'An electron falls to a lower energy level',
-            'Two atoms collide'
+            'อิเล็กตรอนย้ายไปยังระดับพลังงานที่สูงขึ้น',
+            'โปรตอนดูดกลืนพลังงาน',
+            'อิเล็กตรอนตกลงสู่ระดับพลังงานที่ต่ำกว่า',
+            'อะตอมสองอะตอมชนกัน'
         ],
+        img: 'https://f.ptcdn.info/201/051/000/oq1r0jkuc4HVj9CbiBu-o.jpg',
         correctAnswer: 2,
+
     },
     {
         id: 'island-6',
         index: 5,
         title: 'Atomic Mass',
-        objective: 'Understand mass contribution',
-        description: 'Electrons are tiny compared to the nucleus. Where does most of the mass come from?',
-        question: 'Which particles contribute most to atomic mass?',
+        objective: 'เข้าใจว่าอนุภาคใดเป็นแหล่งกำเนิดมวลหลักของอะตอม',
+        description: 'อิเล็กตรอนมีมวลน้อยมากเมื่อเทียบกับนิวเคลียส แล้วมวลส่วนใหญ่ของอะตอมมาจากไหนกันแน่?',
+        question: 'อนุภาคใดมีส่วนทำให้เกิดมวลของอะตอมมากที่สุด?',
         options: [
-            'Electrons only',
-            'Protons and Neutrons',
-            'Neutrons only',
-            'Photons'
+            'อิเล็กตรอนเท่านั้น',
+            'โปรตอนและนิวตรอน',
+            'นิวตรอนเท่านั้น',
+            'โฟตอน'
         ],
         correctAnswer: 1,
     },
@@ -95,29 +101,30 @@ export const levels: Level[] = [
         id: 'island-7',
         index: 6,
         title: 'Ions',
-        objective: 'Understand charged atoms',
-        description: 'If an atom loses an electron, its charge balance changes.',
-        question: 'What is an atom with a positive or negative charge called?',
+        objective: 'เข้าใจความหมายของอะตอมที่มีประจุไฟฟ้า',
+        description: 'เมื่ออะตอมสูญเสียหรือได้รับอิเล็กตรอน สมดุลของประจุจะเปลี่ยนไป',
+        question: 'อะตอมที่มีประจุบวกหรือประจุลบเรียกว่าอะไร?',
         options: [
-            'Isotope',
-            'Molecule',
-            'Ion',
-            'Element'
+            'ไอโซโทป',
+            'โมเลกุล',
+            'ไอออน',
+            'ธาตุ'
         ],
+        img: 'https://f.ptcdn.info/201/051/000/oq1r0jkuc4HVj9CbiBu-o.jpg',
         correctAnswer: 2,
     },
     {
         id: 'island-8',
         index: 7,
         title: 'Valence Electrons',
-        objective: 'Identify bonding electrons',
-        description: 'Chemical reactions happen on the surface of the atom.',
-        question: 'Where are valence electrons located?',
+        objective: 'เข้าใจตำแหน่งของอิเล็กตรอนเวเลนซ์',
+        description: 'ปฏิกิริยาเคมีส่วนใหญ่เกิดขึ้นที่บริเวณรอบนอกของอะตอม',
+        question: 'อิเล็กตรอนเวเลนซ์อยู่ที่ตำแหน่งใด?',
         options: [
-            'In the nucleus',
-            'In the innermost shell',
-            'In the outermost shell',
-            'Floating freely outside'
+            'ภายในนิวเคลียส',
+            'ในชั้นพลังงานที่อยู่ชั้นในสุด',
+            'ในชั้นพลังงานนอกสุด',
+            'ลอยอยู่นอกอะตอม'
         ],
         correctAnswer: 2,
     },
@@ -125,14 +132,14 @@ export const levels: Level[] = [
         id: 'island-9',
         index: 8,
         title: 'Radioactivity',
-        objective: 'Understand instability',
-        description: 'Unstable nuclei try to fix themselves by releasing particles.',
-        question: 'What is the process of an unstable nucleus releasing energy?',
+        objective: 'เข้าใจความไม่เสถียรของนิวเคลียส',
+        description: 'นิวเคลียสที่ไม่เสถียรจะพยายามปรับตัวเองให้เสถียรโดยการปล่อยพลังงานหรืออนุภาคออกมา',
+        question: 'กระบวนการที่นิวเคลียสไม่เสถียรปล่อยพลังงานออกมาเรียกว่าอะไร?',
         options: [
-            'Radioactive Decay',
-            'Electron Capture',
-            'Ionization',
-            'Fusion'
+            'การสลายตัวกัมมันตรังสี',
+            'การจับอิเล็กตรอน',
+            'การเกิดไอออน',
+            'นิวเคลียร์ฟิวชัน'
         ],
         correctAnswer: 0,
     },
@@ -140,14 +147,14 @@ export const levels: Level[] = [
         id: 'island-10',
         index: 9,
         title: 'Nuclear Fission',
-        objective: 'Understand splitting atoms',
-        description: 'Splitting an atom releases massive energy.',
-        question: 'What happens during nuclear fission?',
+        objective: 'เข้าใจการแตกตัวของนิวเคลียสและการปลดปล่อยพลังงาน',
+        description: 'การแตกตัวของนิวเคลียสสามารถปลดปล่อยพลังงานมหาศาลออกมาได้',
+        question: 'สิ่งใดเกิดขึ้นในกระบวนการนิวเคลียร์ฟิชชัน?',
         options: [
-            'Two atoms merge',
-            'An atom loses an electron',
-            'A nucleus splits into smaller parts',
-            'A proton turns into a neutron'
+            'อะตอมสองอะตอมรวมกัน',
+            'อะตอมสูญเสียอิเล็กตรอน',
+            'นิวเคลียสแตกออกเป็นส่วนที่เล็กลง',
+            'โปรตอนเปลี่ยนเป็นนิวตรอน'
         ],
         correctAnswer: 2,
     },

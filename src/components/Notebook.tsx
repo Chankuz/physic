@@ -5,10 +5,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { X } from 'lucide-react';
 
 export const Notebook = () => {
-    const { isNotebookOpen, toggleNotebook, isLevelCompleted, unlockedLearningIndex } = useGameStore();
+    const { isNotebookOpen, toggleNotebook, unlockedLearningIndex } = useGameStore();
 
-    // In a real app, this might track collected logs. 
-    // For now, let's show all unlocked learning content.
     const collectedNotes = learningLevels.filter((_, idx) => idx <= unlockedLearningIndex);
 
     return (
@@ -28,7 +26,6 @@ export const Notebook = () => {
                 />
             </motion.button>
 
-            {/* Modal */}
             <AnimatePresence>
                 {isNotebookOpen && (
                     <>
@@ -80,7 +77,7 @@ export const Notebook = () => {
 
                                 {/* Footer */}
                                 <div className="bg-[#eee8d5] p-3 border-t-4 border-slate-900 text-center text-xs text-slate-500 uppercase tracking-widest">
-                                    Atomic Physics Database // VER 1.0
+                                     // VER 1.0
                                 </div>
                             </motion.div>
                         </motion.div>

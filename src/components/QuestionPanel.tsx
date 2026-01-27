@@ -82,6 +82,9 @@ export const QuestionPanel = () => {
                                 <p className="text-lg text-slate-200 mb-6">{currentActionLevel.question}</p>
 
                                 <div className="space-y-3">
+                                    <div className="my-8">
+                                        <img src={currentActionLevel.img} alt="" className='rounded-lg' />
+                                    </div>
                                     {currentActionLevel.options.map((option, idx) => (
                                         <button
                                             key={idx}
@@ -98,6 +101,7 @@ export const QuestionPanel = () => {
                                         </button>
                                     ))}
                                 </div>
+
                             </div>
 
                             {/* Feedback Area */}
@@ -109,7 +113,7 @@ export const QuestionPanel = () => {
                                         className="text-red-400 flex items-center gap-2 bg-red-900/20 px-4 py-2 rounded border border-red-500/30"
                                     >
                                         <X size={18} />
-                                        <span>Incorrect. Try again!</span>
+                                        <span>ผิด! ลองใหม่</span>
                                     </motion.div>
                                 )}
                                 {showFeedback === 'correct' && (
@@ -119,7 +123,7 @@ export const QuestionPanel = () => {
                                         className="text-green-400 flex items-center gap-2 bg-green-900/20 px-4 py-2 rounded border border-green-500/30"
                                     >
                                         <Check size={18} />
-                                        <span>Correct! Unlocking next island...</span>
+                                        <span>ถูกต้อง! ไปต่อได้เลย</span>
                                     </motion.div>
                                 )}
                             </div>

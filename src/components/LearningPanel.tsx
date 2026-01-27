@@ -4,11 +4,12 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { X, Check } from 'lucide-react';
 
 export const LearningPanel = () => {
-    const { currentLearningLevel, isModalOpen, closeLevelModal, unlockNextLevel } = useGameStore();
+    const { currentLearningLevel, isModalOpen, closeLevelModal, unlockNextLevel, gainXP } = useGameStore();
 
     if (!currentLearningLevel) return null;
 
     const handleComplete = () => {
+        gainXP(50); // Award 50 XP
         unlockNextLevel();
     };
 
@@ -54,6 +55,37 @@ export const LearningPanel = () => {
                                 </p>
                             </div>
 
+                            {currentLearningLevel.video && (
+                                <div className="mt-6">
+                                    <h3 className="text-lg font-bold text-emerald-300 mb-4">Video Tutorial</h3>
+                                    <div
+                                        className="w-full rounded-xl overflow-hidden shadow-lg border border-emerald-500/20"
+                                        dangerouslySetInnerHTML={{ __html: currentLearningLevel.video }}
+                                    />
+                                </div>
+                            )}
+
+                            {currentLearningLevel.img && (
+                                <div className="mt-6">
+                                    <h3 className="text-lg font-bold text-emerald-300 mb-4">รูปภาพที่เกี่ยวข้อง</h3>
+                                    <img
+                                        src={currentLearningLevel.img}
+                                        alt={currentLearningLevel.title}
+                                        className="w-full rounded-xl overflow-hidden shadow-lg border border-emerald-500/20"
+                                    />
+                                </div>
+                            )}
+
+                            {currentLearningLevel.formula && (
+                                <div className="mt-6">
+                                    <h3 className="text-lg font-bold text-emerald-300 mb-4">สูตรที่เกี่ยวข้อง</h3>
+                                    <div
+                                        className="w-full rounded-xl overflow-hidden shadow-lg border border-emerald-500/20"
+                                        dangerouslySetInnerHTML={{ __html: currentLearningLevel.formula }}
+                                    />
+                                </div>
+                            )}
+
                             <div className="mt-12 bg-emerald-900/20 p-6 rounded-xl border border-emerald-500/20">
                                 <div className="flex items-start gap-4">
                                     <div className="p-3 bg-emerald-500/20 rounded-full text-emerald-400">
@@ -62,7 +94,7 @@ export const LearningPanel = () => {
                                     <div>
                                         <h3 className="text-lg font-bold text-emerald-300 mb-1">Knowledge Check</h3>
                                         <p className="text-emerald-100/70 text-sm">
-                                            Read the content above to understand the concept. Designing the future requires understanding the building blocks of the universe!
+                                            โปรดอ่านเนื้อหาด้านบนเพื่อทำความเข้าใจแนวคิด การออกแบบอนาคตจำเป็นต้องเข้าใจองค์ประกอบพื้นฐานของจักรวาล!
                                         </p>
                                     </div>
                                 </div>

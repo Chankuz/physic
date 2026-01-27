@@ -1,4 +1,4 @@
-import { useMemo, useEffect, useState } from 'react';
+import { useMemo, useEffect } from 'react';
 import ReactFlow, {
   type Edge,
   type Node,
@@ -14,6 +14,7 @@ import { LearningPanel } from './components/LearningPanel';
 import { Notebook } from './components/Notebook';
 import { Navbar } from './components/Navbar';
 import { LandingPage } from './components/LandingPage';
+import { GameHUD } from './components/GameHUD';
 import { levels } from './data/levels';
 import { learningLevels } from './data/learningLevels';
 import { useGameStore } from './store/gameStore';
@@ -104,6 +105,7 @@ function GameMapContent() {
         {/* <Controls showInteractive={false} className="!bg-slate-800 !border-slate-700 !text-white [&>button]:!border-slate-700 [&>button:hover]:!bg-slate-700 !top-20" /> */}
       </ReactFlow>
 
+      <GameHUD />
       <Navbar />
 
       <QuestionPanel />
