@@ -9,7 +9,6 @@ export const Footer = () => {
                         <span className='text-xl font-bold'>Physic</span>
                     </div>
                     <div className='flex items-center gap-2'>
-                        <span className='text-sm'>  27/01/2026 </span>
                     </div>
                 </div>
             </div>

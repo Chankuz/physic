@@ -35,9 +35,9 @@ export const GameHUD = () => {
     }, [playerLevel]);
 
     return (
-        <div className="fixed bottom-6 left-6 z-50 flex items-end gap-4 pointer-events-none select-none font-mono">
+        <div className="fixed bottom-4 left-4 md:bottom-6 md:left-6 z-50 flex items-end gap-2 md:gap-4 pointer-events-none select-none font-mono transition-all duration-300">
 
-            <div className="flex gap-4 bg-white/20 rounded-lg p-2">
+            <div className="flex gap-2 md:gap-4 bg-white/20 rounded-lg p-2 backdrop-blur-sm">
 
                 {/* Level Badge */}
                 <div className="relative group">
@@ -45,9 +45,9 @@ export const GameHUD = () => {
                     <div className="absolute inset-0 bg-cyan-500/20 rounded-full blur-xl opacity-80 animate-pulse" />
 
                     {/* Badge Container */}
-                    <div className="relative w-16 h-16 bg-slate-900/90 border-2 border-cyan-500/50 rounded-full flex flex-col items-center justify-center shadow-[0_0_20px_rgba(6,182,212,0.3)] backdrop-blur-md">
-                        <span className="text-[10px] text-cyan-400 uppercase tracking-widest font-bold opacity-80">Lv.</span>
-                        <span className="text-2xl font-bold text-white drop-shadow-[0_0_5px_rgba(255,255,255,0.5)]">
+                    <div className="relative w-12 h-12 md:w-16 md:h-16 bg-slate-900/90 border-2 border-cyan-500/50 rounded-full flex flex-col items-center justify-center shadow-[0_0_20px_rgba(6,182,212,0.3)] backdrop-blur-md transition-all duration-300">
+                        <span className="text-[8px] md:text-[10px] text-cyan-400 uppercase tracking-widest font-bold opacity-80">Lv.</span>
+                        <span className="text-lg md:text-2xl font-bold text-white drop-shadow-[0_0_5px_rgba(255,255,255,0.5)]">
                             {playerLevel}
                         </span>
                     </div>
@@ -63,10 +63,10 @@ export const GameHUD = () => {
                 </div>
 
                 {/* XP Bar Container */}
-                <div className="flex flex-col gap-1 pb-2">
+                <div className="flex flex-col gap-1 pb-1 md:pb-2 justify-end">
 
                     {/* Floating XP Text Area */}
-                    <div className="h-8 relative w-full">
+                    <div className="h-4 md:h-8 relative w-full">
                         <AnimatePresence>
                             {xpGain.map((gain) => (
                                 <motion.div
@@ -75,7 +75,7 @@ export const GameHUD = () => {
                                     animate={{ opacity: 1, y: -20 }}
                                     exit={{ opacity: 0, y: -40 }}
                                     transition={{ duration: 1.5, ease: "easeOut" }}
-                                    className="absolute left-0 text-emerald-400 font-bold text-sm flex items-center gap-1 shadow-black drop-shadow-md"
+                                    className="absolute left-0 text-emerald-400 font-bold text-xs md:text-sm flex items-center gap-1 shadow-black drop-shadow-md whitespace-nowrap"
                                 >
                                     +{gain.amount} XP
                                 </motion.div>
@@ -84,7 +84,7 @@ export const GameHUD = () => {
                     </div>
 
                     {/* Progress Bar Background */}
-                    <div className="relative w-64 h-3 bg-slate-800/80 rounded-full overflow-hidden border border-slate-700/50 backdrop-blur-sm">
+                    <div className="relative w-32 md:w-64 h-2 md:h-3 bg-slate-800/80 rounded-full overflow-hidden border border-slate-700/50 backdrop-blur-sm transition-all duration-300">
                         {/* Fill */}
                         <motion.div
                             className="h-full bg-gradient-to-r from-cyan-600 via-cyan-400 to-emerald-400 shadow-[0_0_10px_rgba(6,182,212,0.5)] relative"
@@ -101,9 +101,9 @@ export const GameHUD = () => {
                     </div>
 
                     {/* XP Text */}
-                    <div className="flex justify-between text-[10px] text-cyan-300/70 font-bold tracking-wider px-1">
+                    <div className="flex justify-between text-[8px] md:text-[10px] text-cyan-300/70 font-bold tracking-wider px-1">
                         <span>{Math.floor(playerXP)} / {xpToNextLevel} XP</span>
-                        <span>เลเวลต่อไป</span>
+                        <span className="hidden md:inline">เลเวลต่อไป</span>
                     </div>
                 </div>
             </div>

@@ -12,16 +12,17 @@ export const Notebook = () => {
     return (
         <>
             {/* Floating Action Button */}
+            {/* Floating Action Button */}
             <motion.button
                 onClick={toggleNotebook}
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 1.2 }}
-                className="fixed bottom-8 right-8 z-50 w-32 h-32 rounded-full flex items-center justify-center focus:outline-none drop-shadow-2xl"
+                className="fixed bottom-2 right-2 md:bottom-8 md:right-8 z-50 w-32 h-32 md:w-32 md:h-32 rounded-full flex items-center justify-center focus:outline-none drop-shadow-2xl transition-all duration-300"
             >
                 <img
                     src={book}
                     alt="Notebook"
-                    className="w-full h-full object-contain filtering-pixelated drop-shadow-lg scale-125"
+                    className="w-full h-full object-contain filtering-pixelated drop-shadow-lg scale-110 md:scale-125"
                     style={{ imageRendering: 'pixelated' }}
                 />
             </motion.button>
