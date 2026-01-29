@@ -69,7 +69,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onStart }) => {
                         className="relative z-10 max-w-4xl"
                     >
                         <h1 className="text-5xl md:text-7xl font-bold font-serif bg-gradient-to-r from-cyan-400 via-white to-emerald-400 bg-clip-text text-transparent mb-6 tracking-tight drop-shadow-sm">
-                            Atom Physics
+                            Atomic Physics
                         </h1>
                         <p className="text-[12px] md:text-xl text-slate-400 max-w-2xl mx-auto leading-relaxed mb-10 font-light">
                             ฟิสิกส์อะตอม (Atomic Physics) คือแขนงหนึ่งของฟิสิกส์ที่ศึกษาเกี่ยวกับโครงสร้างของอะตอม คุณสมบัติของอะตอม และปฏิสัมพันธ์ระหว่างอะตอมกับรังสีแม่เหล็กไฟฟ้า โดยเฉพาะอย่างยิ่งการศึกษาเกี่ยวกับอิเล็กตรอนในอะตอมและปฏิสัมพันธ์ของอิเล็กตรอนกับนิวเคลียส
