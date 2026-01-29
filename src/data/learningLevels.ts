@@ -107,5 +107,6 @@ export const learningLevels: LearningLevel[] = [
         content: 'ปรากฏการณ์โฟโตอิเล็กทริก (photoelectric effect) เป็นปรากฏการณ์ที่อิเล็กตรอนหลุดจากผิวโลหะเมื่อมีแสงที่มีความถี่เหมาะสมมาตกกระทบโดยเรียกอิเล็กตรอนที่หลุดออกมานี้ว่า โฟโตอิเล็กตรอน (photoelectron) และเกิดกระแสโฟโตอิเล็กตรอน (photoelectric current) ถูกค้นพบโดย ไฮน์ริช รูดอล์ฟ แฮทซ์ (Heinrich Rudolf Hertz)',
         video: '<iframe width="560" height="315" src="https://www.youtube.com/embed/Jtoo9LwNnxg?si=injJJZ8Y3Cw65Ecw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>',
         img: 'https://www.smartmathpro.com/wp-content/uploads/2025/12/atomic-physics-12-2048x1366.webp'
-    }
+    },
+
 ];
