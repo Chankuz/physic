@@ -13,7 +13,7 @@ export const Navbar = () => {
     };
 
     return (
-        <nav className="fixed top-0 left-0 w-full h-14 md:h-16 bg-slate-900/90 backdrop-blur-md border-b border-white/10 z-50 flex items-center justify-between px-4 py-2 md:p-8 shadow-xl opacity-80 transition-all duration-300">
+        <nav className="fixed top-0 left-0 w-full h-14 md:h-16 bg-slate-900/90 backdrop-blur-md border-b border-white/10 z-50 flex items-center justify-between px-4 py-2 md:p-8 shadow-xl opacity-90 transition-all duration-300">
             {/* Left: Logo */}
             <div className="flex items-center gap-2 select-none cursor-pointer" onClick={() => setGameStarted(false)}>
 

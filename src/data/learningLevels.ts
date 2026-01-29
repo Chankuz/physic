@@ -42,71 +42,73 @@ export const learningLevels: LearningLevel[] = [
     {
         id: 'learn-5',
         index: 4,
-        title: 'ชั้นพลังงานของอิเล็กตรอน',
-        content: 'อิเล็กตรอนจะอยู่ในระดับพลังงานหรือ “ชั้นพลังงาน” รอบนิวเคลียส โดยชั้นพลังงานแรกบรรจุอิเล็กตรอนได้ 2 ตัว และชั้นพลังงานที่สองบรรจุได้ 8 ตัว',
-        video: '<iframe width="560" height="315" src="https://www.youtube.com/embed/u4ji0z4grTU?si=HhgNYkk19tYZMJLy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'
+        title: 'พลังงานของโฟตอน',
+        content: 'พลังงานของแสงหรือโฟตอนขึ้นกับความถี่ของแสง ยิ่งความถี่สูง พลังงานยิ่งมาก ใช้ในการอธิบายการปล่อยและดูดกลืนแสงของอะตอม ข้อสังเกต : พลังงานควอนตัมมีค่าน้อยมากเนื่องจากค่าคงที่ของพลังค์มีค่าน้อย h = 6.63 x 10⁻³⁴ Js',
+        formula: 'E = hf',
+        img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRH4ysrP91wMa2fKZgwAmsba_CeUDpRNZvpmA&s'
     },
     {
         id: 'learn-6',
         index: 5,
-        title: 'มวลอะตอม',
-        content: 'มวลของอะตอมส่วนใหญ่อยู่ที่นิวเคลียส ซึ่งประกอบด้วยโปรตอนและนิวตรอน อิเล็กตรอนมีมวลน้อยมากเมื่อเทียบกับอนุภาคเหล่านี้',
+        title: 'ความสัมพันธ์ของความยาวคลื่น',
+        content: 'สมการ c = fλ คือความสัมพันธ์พื้นฐานของคลื่นแม่เหล็กไฟฟ้า โดย c คืออัตราเร็วแสงในสุญญากาศ (3 x 10^8 เมตร/วินาที), f คือความถี่ (Hz), และ λ คือความยาวคลื่น (เมตร) สมการนี้แสดงให้เห็นว่าความถี่และความยาวคลื่นแปรผกผันกัน นั่นคือถ้าความถี่สูงขึ้น ความยาวคลื่นจะสั้นลง',
+        formula: 'c = fλ',
+        img: 'https://www.shutterstock.com/image-illustration/physics-equation-template-icon-260nw-1990582805.jpg'
     },
     {
         id: 'learn-7',
         index: 6,
-        title: 'ไอออน',
-        content: 'ไอออนคืออะตอมที่สูญเสียหรือได้รับอิเล็กตรอน ทำให้อะตอมมีประจุไฟฟ้า ถ้าเสียอิเล็กตรอนจะเป็นไอออนบวก (แคตไอออน) และถ้าได้รับอิเล็กตรอนจะเป็นไอออนลบ (แอนไอออน)',
+        title: 'พลังงานระดับอะตอมไฮโดรเจน',
+        content: 'พลังงานระดับอะตอมไฮโดรเจนที่ E = -13.6 (eV) คือพลังงานของอิเล็กตรอนในวงโคจรชั้นในสุด (n=1) เรียกว่า "สถานะพื้น (ground state)" ซึ่งเป็นสภาวะที่อะตอมมีพลังงานต่ำสุดและเสถียรที่สุด ค่าติดลบแสดงถึงอิเล็กตรอนถูกยึดเหนี่ยวไว้กับนิวเคลียส และต้องใช้พลังงานอย่างน้อย 13.6 eV เพื่อปลดปล่อยอิเล็กตรอนให้เป็นอิสระ (Ionization Energy).',
+        formula: 'Eₙ = -13.6 / n² (eV)',
+        img: 'https://worawitbas.wordpress.com/wp-content/uploads/2013/02/1-338.jpg'
     },
     {
         id: 'learn-8',
         index: 7,
-        title: 'อิเล็กตรอนเวเลนซ์',
-        content: 'อิเล็กตรอนเวเลนซ์คืออิเล็กตรอนที่อยู่ในชั้นพลังงานนอกสุด มีบทบาทสำคัญในการกำหนดการเกิดปฏิกิริยาเคมีและการเกิดพันธะกับอะตอมอื่น',
-        video: '<iframe width="560" height="315" src="https://www.youtube.com/embed/YbpsDiTBejI?si=YSzBqc685pEqKuv2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'
+        title: 'สูตรไรด์เบิร์ก',
+        content: 'ใช้คำนวณความยาวคลื่นของสเปกตรัมเส้นของอะตอมไฮโดรเจน เมื่ออิเล็กตรอนเปลี่ยนระดับพลังงาน R = 1.097 x 10^7 m^-1 (ค่าคงที่ไรด์เบิร์ก)',
+        formula: '1/λ = R(1/n₁² − 1/n₂²)',
+        img: 'https://www.scimath.org/images/2017/lesson/7437/7437-6.jpg'
     },
     {
         id: 'learn-9',
         index: 8,
-        title: 'กัมมันตรังสี',
-        content: 'นิวเคลียสบางชนิดไม่เสถียรและจะปล่อยพลังงานออกมาเพื่อทำให้ตัวเองเสถียร กระบวนการนี้เรียกว่ากัมมันตรังสี ซึ่งมีการสลายตัวแบบแอลฟา เบตา และแกมมา',
+        title: 'โมเมนตัมเชิงมุม (โบร์)',
+        content: 'ทฤษฎีของนีลส์ โบร์กำหนดว่าโมเมนตัมเชิงมุมของอิเล็กตรอนมีค่าไม่ต่อเนื่อง เป็นจำนวนเท่าของค่าคงที่พลังค์ลดรูป',
+        formula: 'L = mvr = nħ',
+        img: 'https://www.chulatutor.com/blog/wp-content/uploads/2022/03/%E0%B8%97%E0%B8%A4%E0%B8%A9%E0%B8%8E%E0%B8%B5%E0%B8%AD%E0%B8%B0%E0%B8%95%E0%B8%AD%E0%B8%A1%E0%B8%82%E0%B8%AD%E0%B8%87%E0%B9%82%E0%B8%9A%E0%B8%A3%E0%B9%8C.png'
     },
     {
         id: 'learn-10',
         index: 9,
-        title: 'นิวเคลียร์ฟิชชัน',
-        content: 'นิวเคลียร์ฟิชชันคือกระบวนการที่นิวเคลียสขนาดใหญ่แตกออกเป็นนิวเคลียสที่เล็กกว่า พร้อมกับปลดปล่อยพลังงานจำนวนมหาศาล ซึ่งเป็นหลักการทำงานของโรงไฟฟ้านิวเคลียร์',
-        video: '<iframe width="560" height="315" src="https://www.youtube.com/embed/5jDFqpoTgDo?si=m_kyMusIjlCQQwRd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'
+        title: 'สมการโฟโตอิเล็กทริก',
+        content: 'สมการโฟโตอิเล็กทริก (Photoelectric Equation) คือสมการที่อธิบายพลังงานของโฟตอนที่ตกกระทบผิวโลหะ ซึ่งจะถูกเปลี่ยนเป็นพลังงานในการดึงอิเล็กตรอนออกมา (ฟังก์ชันงาน) และพลังงานจลน์สูงสุดของอิเล็กตรอนที่หลุดออกมา',
+        formula: 'E = hf = W₀ + Ekₘₐₓ',
+        video: '<iframe width="560" height="315" src="https://www.youtube.com/embed/Jtoo9LwNnxg?si=7VbzgM7OyGJWfbN9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'
     },
     {
         id: 'learn-11',
         index: 10,
-        title: 'การแผ่คลื่นแม่เหล็กไฟฟ้าของวัตถุดำ',
-        content: 'จากการทดลองพบว่า วัตถุทุกชนิด ไม่ว่าจะเป็นของแข็ง ของเหลว หรือแก๊ส หากมีอุณหภูมิสูงกว่าศูนย์องศาสัมบูรณ์ (0 K)(0 K) จะแผ่คลื่นแม่เหล็กไฟฟ้าออกมาเสมอ โดยคลื่นแม่เหล็กไฟฟ้าที่แผ่ออกมานั้นมีความถี่ต่อเนื่อง เรียกว่า สเปกตรัมต่อเนื่อง และมีความยาวคลื่นสูงสุด (λmax) ดังรูป',
-        img: 'https://www.smartmathpro.com/wp-content/uploads/2025/12/atomic-physics-2-2048x1366.webp'
+        title: 'สมการเดอ บรอยล์ (de Broglie Equation)',
+        content: 'เดอ บรอยล์ได้อธิบายสมมติฐานของโบร์ว่า การโคจรของอิเล็กตรอนรอบนิวเคลียสไม่เกิดการแผ่คลื่นแม่เหล็กไฟฟ้าออกมา เนื่องจากอิเล็กตรอนที่เคลื่อนที่รอบนิวเคลียสแสดงสมบัติเป็นคลื่นนิ่งได้ โดยมีความยาวเส้นรอบวงของวงโคจรมีค่าเป็นจำนวนเต็มเท่าของความยาวคลื่นของอิเล็กตรอน ดังรูป',
+        formula: 'λ = h / p = h / mv',
+        img: "https://www.smartmathpro.com/wp-content/uploads/2025/12/atomic-physics-21-1024x683.webp"
     },
     {
         id: 'learn-12',
         index: 11,
-        title: 'ทฤษฎีอะตอมของโบร์',
-        content: 'แบบจำลองอะตอมแนวคิดเกี่ยวกับโครงสร้างอะตอมได้พัฒนามาอย่างต่อเนื่อง ตามหลักฐานการทดลองที่ค้นพบใหม่ ๆ ในแต่ละยุคสมัย โดยสามารถสรุปการเปลี่ยนแปลงที่สำคัญของแบบจำลองได้ดังนีแแบบจำลองอะตอมในยุคแรกถูกเสนอโดย จอห์น ดอลตัน โดยระบุว่าอะตอมเป็นเพียง ทรงกลมตัน ที่เล็กที่สุด ไม่ได้สามารถแบ่งแยกและทำลายได้ ซึ่งอะตอมของธาตุชนิดเดียวกันจะมีสมบัติเหมือนกัน แต่จะมีสมบัติต่างจากอะตอมของธาตุอื่น อย่างไรก็ตาม แบบจำลองนี้ไม่สามารถอธิบายการมีอยู่ของอนุภาคที่มีประจุไฟฟ้าภายในอะตอมได้',
-        img: 'https://www.smartmathpro.com/wp-content/uploads/2025/12/atomic-physics-5-2048x1366.webp'
+        title: 'ฟังก์ชันงาน',
+        content: 'อิเล็กตรอนถูกยึดเหนี่ยวด้วยพลังงานภายในอะตอมของสสาร การจะดึงอิเล็กตรอนออกจากผิวโลหะต้องใช้พลังงานอย่างน้อยค่าหนึ่ง ซึ่งเรียกว่า “ฟังก์ชันงาน (work function)”หากพลังงานของโฟตอนที่ตกกระทบมีค่า น้อยกว่า ฟังก์ชันงาน (hf<W) หรือ (f<f0)อิเล็กตรอนจะ ไม่หลุดออกมาหากพลังงานของโฟตอนที่ตกกระทบมีค่า มากกว่าหรือเท่ากับ ฟังก์ชันงาน (hf≥ W) หรือ (f≥ f0) อิเล็กตรอนจะ หลุดออกมาจากผิวโลหะได้',
+        formula: 'W₀ = hf₀',
+        img: "https://www.smartmathpro.com/wp-content/uploads/2025/12/atomic-physics-18-1024x683.webp"
     },
     {
         id: 'learn-13',
         index: 12,
-        title: 'ทฤษฎีอะตอมของนีลส์ โบร์',
-        content: 'อิเล็กตรอนเคลื่อนที่เป็นวงกลมรอบนิวเคลียสโดยไม่ปล่อยพลังงานในรูปคลื่นแม่เหล็กไฟฟ้าออกมา ในวงโคจรที่เสถียรนี้ อิเล็กตรอนจะมีโมเมนตัมเชิงมุมคงตัว โดยเป็นจำนวนเท่าของ h h-',
-        formula: 'L = mvr = nhL | \\(L = mvr = nhL\\)',
-        img: 'https://www.smartmathpro.com/wp-content/uploads/2025/12/atomic-physics-6-2048x1366.webp'
-    },
-    {
-        id: 'learn-14',
-        index: 13,
-        title: 'ปรากฏการณ์โฟโตอิเล็กทริก',
-        content: 'ปรากฏการณ์โฟโตอิเล็กทริก (photoelectric effect) เป็นปรากฏการณ์ที่อิเล็กตรอนหลุดจากผิวโลหะเมื่อมีแสงที่มีความถี่เหมาะสมมาตกกระทบโดยเรียกอิเล็กตรอนที่หลุดออกมานี้ว่า โฟโตอิเล็กตรอน (photoelectron) และเกิดกระแสโฟโตอิเล็กตรอน (photoelectric current) ถูกค้นพบโดย ไฮน์ริช รูดอล์ฟ แฮทซ์ (Heinrich Rudolf Hertz)',
-        video: '<iframe width="560" height="315" src="https://www.youtube.com/embed/Jtoo9LwNnxg?si=injJJZ8Y3Cw65Ecw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>',
-        img: 'https://www.smartmathpro.com/wp-content/uploads/2025/12/atomic-physics-12-2048x1366.webp'
-    },
+        title: 'Complete',
+        content: 'Complete',
+        img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgece7TzDiT_UF9BIp3DpCODuMVUYkL9xknw&s"
+    }
 
 ];
